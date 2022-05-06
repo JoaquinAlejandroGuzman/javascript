@@ -42,7 +42,7 @@ for (let i=1;i<=8;i++)
     }
 }
 
-*/
+
 
 //SUMATORIA DE NUMERO QUE SE LE PIDE A UN USUARIO
 
@@ -53,4 +53,23 @@ for (i = 0; i <= num; i++)
 {
     aux +=i;
 }
-console.log(aux);
+console.log(aux);  */
+
+let plataforma = prompt("Ingrese nombre de plataforma");
+let comision = prompt("Ingrese numero de COMISION");
+
+
+while (plataforma!=="CODERHOUSE" && comision !==30380)
+{
+    alert("SU RESPUESTA ES INCORRECTA");
+    let rta = prompt("Quiere una pista?  SI / NO")
+        if (rta =="SI")
+        {
+           alert("PUEDE INGRESAR A SU PLATAFORMA DE ESTUDIO Y AHI TENDRA LA RESPUESTA CORRECTA")
+        } 
+    plataforma = prompt("Ingrese nombre de plataforma");
+    comision = prompt("Ingrese numero de COMISION");
+
+}
+
+alert("SU RESPUESTA ES CORRECTA");
