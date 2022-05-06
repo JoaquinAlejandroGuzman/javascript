@@ -53,7 +53,7 @@ for (i = 0; i <= num; i++)
 {
     aux +=i;
 }
-console.log(aux);  */
+console.log(aux);  
 
 let plataforma = prompt("Ingrese nombre de plataforma");
 let comision = prompt("Ingrese numero de COMISION");
@@ -75,4 +75,11 @@ while (plataforma!=="CODERHOUSE" && comision !==30380)
 
 }
 
-alert("SU RESPUESTA ES CORRECTA");
+alert("SU RESPUESTA ES CORRECTA"); */
+
+function funcionSimple() 
+{
+    alert("SOY UNA FUNCION SIMPLE");
+}
+
+funcionSimple();
