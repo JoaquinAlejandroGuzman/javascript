@@ -77,9 +77,9 @@ while (plataforma!=="CODERHOUSE" && comision !==30380)
 
 alert("SU RESPUESTA ES CORRECTA"); */
 
-function funcionSimple() 
+function funcionSimple(i) 
 {
-    alert("SOY UNA FUNCION SIMPLE");
+    alert("su nombre es " + i);
 }
 
-funcionSimple();
+funcionSimple("chapulin");
