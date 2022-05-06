@@ -66,6 +66,9 @@ while (plataforma!=="CODERHOUSE" && comision !==30380)
         if (rta =="SI")
         {
            alert("PUEDE INGRESAR A SU PLATAFORMA DE ESTUDIO Y AHI TENDRA LA RESPUESTA CORRECTA")
+        } else (rta !=="NO")
+        {
+            alert("RESPUESTA INVALIDA")
         } 
     plataforma = prompt("Ingrese nombre de plataforma");
     comision = prompt("Ingrese numero de COMISION");
