@@ -75,7 +75,7 @@ while (plataforma!=="CODERHOUSE" && comision !==30380)
 
 }
 
-alert("SU RESPUESTA ES CORRECTA"); */
+alert("SU RESPUESTA ES CORRECTA"); 
 
 function funcionSimple(i) 
 {
@@ -83,3 +83,36 @@ function funcionSimple(i)
 }
 
 funcionSimple("chapulin");
+
+*/
+
+
+const pedirDatos = () => {
+    const nombre = prompt("Cual es su nombre?");
+    const apellido = prompt("Cual es su Apellido?");
+    const cantidadHijos = Number(prompt("Cuantos hijos tiene Ud?"));
+
+    alert(`Hola, bienvenidx ${nombre + " " + apellido}`)
+
+    if (!isNaN(cantidadHijos)){
+        consultarNombres(cantidadHijos); 
+    }
+}
+
+const consultarNombres = (cantidad) => {
+    for (let i = 1; i <= cantidad; i++){
+        const nombreHijo =  prompt(`Cual es el nombre de su hijo Nro ${i}?`);
+        const edadHijo = Number(prompt(`Cual es la edad de su hijo ${nombreHijo}`));
+        verificarEdad(edadHijo,nombreHijo);
+    }
+}
+
+const verificarEdad = (edad, nombre) => {
+    if (edad < 18) {
+        alert(`Su hijx ${nombre} es MENOR de edad`);
+    } else {
+        alert(`Su hijx ${nombre} es MAYOR de edad`);
+    }
+}
+
+pedirDatos();
