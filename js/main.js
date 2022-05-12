@@ -86,6 +86,7 @@ funcionSimple("chapulin");
 
 */
 
+/* ESTE ES EL QUE HABIA ENTREGADO PARA DESAFIO SIMULADOR INTERATCTIVO
 
 const pedirDatos = () => {
     const nombre = prompt("Cual es su nombre?");
@@ -115,4 +116,61 @@ const verificarEdad = (edad, nombre) => {
     }
 }
 
-pedirDatos();
+pedirDatos(); */
+
+const solicitarDatos = () => {
+
+    const nombreProfesor = prompt("Indique su Nombre y Apellido");
+    const numeroLegajo = Number(prompt("Indique su Numero de Legajo Unico de DOCENTE"));
+    
+    if (!isNaN(numeroLegajo) && numeroLegajo > 10000){
+        alert(`Bienvenido ${nombreProfesor} (L.U.D ${numeroLegajo}) a PLAVICA (Plataforma Virtal de Calificaciones)`);
+        const numeroAlumnos = Number(prompt("Indique cantidad de alumnos"));
+       
+        solicitarAlumnado(numeroAlumnos);
+
+    } else{
+        alert("- ACCESO DENEGADO - ACCESO DENEGADO - ACCESO DENEGADO -");
+        alert("en caso de NO estar conforme comuniquese a Soporte Tecnico 4444-4444 para solucionar su Ingreso");
+    }
+}
+
+const solicitarAlumnado = (cant) => {
+    for (let i = 1; i <= cant; i++){
+        const nombreAlumno = prompt(`Indique nombre del Alumno Nro ${i}`);
+        const calificacionAlumno = Number(prompt(`Calificacion del Alumno ${nombreAlumno} (1 al 10)`));
+        verificarCalif (calificacionAlumno, nombreAlumno);
+    }
+}
+
+const verificarCalif = (nota, nombre) =>{
+    if (nota >4){
+        alert(`El alumno ${nombre} APROBO con un ${nota}, FELICITELO!`)
+    } else{
+        alert(`El alumno ${nombre} DESAPROBO con un ${nota}, ASIGNELE FECHA PARA RECUPERATORIO, URGENTE`);
+
+        const rendimiento = Number(prompt(`Como fue el rendimiento universitario del alumno ${nombre}
+        ....................................
+        SELECCIONE EL NUMERO CORRESPONDIENTE
+        ....................................
+                1 - INSUFICIENTE 
+                2 - REGULAR 
+                3 - BUENO`));
+           
+        asignarFecha(rendimiento,nombre);
+    }
+}
+
+const asignarFecha = (concepto,nombre) => {
+    
+    if (concepto === 1){
+        alert (`El alumno ${nombre} recibio el concepto INSUFICIENTE, por ende debera RECURSAR la totalidad de la materia.`)
+    }else if (concepto === 2){
+        alert (`El alumno ${nombre} recibio el concepto REGULAR, por ende tendra UN RECUPERATORIO EN DICIEMBRE.`)
+    }else if (concepto === 3){
+        alert (`El alumno ${nombre} recibio el concepto BUENO, por ende tendra que realizar un TRABAJO PRACTICO INTEGRADOR, la proxima clase a LIBRO ABIERTO.`)
+    }
+
+}
+
+solicitarDatos();
