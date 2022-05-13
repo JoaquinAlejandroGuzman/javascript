@@ -118,7 +118,9 @@ const verificarEdad = (edad, nombre) => {
 
 pedirDatos(); */
 
-const solicitarDatos = () => {
+// SIMULADOR VIRTUAL PLAVICA
+
+ const solicitarDatos = () => {
 
     const nombreProfesor = prompt("Indique su Nombre y Apellido");
     const numeroLegajo = Number(prompt("Indique su Numero de Legajo Unico de DOCENTE"));
@@ -173,4 +175,7 @@ const asignarFecha = (concepto,nombre) => {
 
 }
 
-solicitarDatos();
+solicitarDatos(); 
+
+
+
