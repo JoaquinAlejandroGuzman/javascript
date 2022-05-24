@@ -119,8 +119,8 @@ const verificarEdad = (edad, nombre) => {
 pedirDatos(); */
 
 // SIMULADOR VIRTUAL PLAVICA
-
- const solicitarDatos = () => {
+/* 
+  const solicitarDatos = () => {
 
     const nombreProfesor = prompt("Indique su Nombre y Apellido");
     const numeroLegajo = Number(prompt("Indique su Numero de Legajo Unico de DOCENTE"));
@@ -174,8 +174,207 @@ const asignarFecha = (concepto,nombre) => {
     }
 
 }
-
+ 
 solicitarDatos(); 
 
 
+ */
+/* 
+class Usuario {
 
+    constructor (nombre, apellido)
+        {
+            this.nombre = nombre;
+            this.apellido = apellido;
+        }
+
+    nombreCompleto()
+        {
+            return this.nombre + " " + this.apellido;
+        }
+
+}
+
+const usuario = new Usuario ("Joaquin Alejandro", "Guzman");
+console.log(usuario.nombreCompleto());
+
+ */
+
+/* 
+class Usuario {
+
+    constructor (id, nombre, apellido,edad, club, federado)
+    {
+        this.id = id;
+        this.nombre=nombre;
+        this.apellido=apellido;
+        this.edad=edad;
+        this.club=club;
+        this.federado=federado;
+    
+    }
+
+    dialogoCompleto()
+        {
+        
+            return this.id + " " + this.nombre + " " + this.apellido+ " " + this.edad+ " " +this.club + " " +this.federado;
+
+        }
+
+}
+
+let nombre = prompt ("cual es tu nombre");
+let edad = Number(prompt("que edad tenes ?"));
+const usuario = new Usuario (nombre, "gomez",edad, "san lorenzo", "si soy federado");
+
+
+console.log(usuario.dialogoCompleto());
+
+ */
+/* 
+class Usuario {
+    constructor (nombre,apellido)
+        {
+            this.nombre = nombre;
+            this.apellido = apellido;
+        }
+    nombreCompleto()
+        {
+            return this.nombre +" "+this.apellido;
+        }
+}
+let name = prompt("INDICAME TU NOMBRE ");
+const user1 = new Usuario (name, "GUZMAN");
+console.log(user1.nombreCompleto()); 
+ */
+
+/* 
+class Usuario { //creo el contructor que le va  dar datos a mis arrays 
+    constructor (id, nombre, apellido)
+        {
+            this.id = id;
+            this.nombre = nombre;
+            this.apellido = apellido;
+        }
+}
+
+let usuarios = []; //CREACION DEL ARRAY DE NOMBRE usuarios
+
+mostrarMenu(); //FUNCION MOSTRAR MENU 
+
+function mostrarMenu()
+{
+    let opcion = Number(prompt(`Ingrese una opcion
+                                1. AGREGAR USUARIO
+                                2. ELIMINAR USUARIO
+                                3. MODIFICAR USUARIO
+                                4. LISTAR USUARIOS
+                                5 SALIR`));
+    
+    switch (opcion){
+        case 1: {
+            agregarUsuario();
+        }
+        
+    }
+     
+}
+
+function agregarUsuario()
+{
+    let id = Number(prompt("Ingrese ID"));
+    let nombre = prompt("Ingrese el Nombre");
+    let apellido = prompt("Ingrese el Apellido");
+
+    let usuario = new Usuario (id, nombre, apellido); // ESTO CREA UN USUARIO 
+
+    usuarios.push(usuario);
+}
+
+console.log(usuarios);
+
+ */
+/* 
+class Usuario {
+    constructor (id, nombre, apellido)
+    {
+        this.id = id;
+        this.nombre = nombre;
+        this.apellido = apellido;
+    }
+} 
+
+let usuarios = [];
+
+mostrarMenu(); // esta funcion sirve para mostrar menu funcion 
+
+function mostrarMenu()
+{
+    let opcion = 0;
+    
+    while (opcion !== 5) //este bucle sirve para cuando es un ciclo while y sea diferente de 5 
+        {
+            opcion = Number(prompt(`INGRESE UNA OPCION NUMERICA
+                                1. AGREGAR USUARIO
+                                2. ELIMINAR USUARIO
+                                3. MODIFICAR USUARIO
+                                4. ENLISTAR USUARIO
+                                5. FINALIZAR PROGRAMA`));
+        switch(opcion){ //este es un switch que indica caso 1
+            case 1: {
+                agregarUsuario();
+            }
+        }
+    }
+}
+
+function agregarUsuario()  //se esta declarando la funcion agregarUsuario()
+{
+    let id = prompt("ingrese ID");
+    let nombre = prompt("ingrese nombre");
+    let apellido = prompt("ingrese apellido");
+
+    let usuario = new Usuario (id,nombre, apellido);
+    usuarios.push(usuario);
+}
+
+console.log(usuarios);
+
+ */
+/* class Usuario{
+    constructor (id, nombre, apellido){
+        this.id = id;
+        this.nombre = nombre;
+        this.apellido = apellido;
+    }
+}
+
+const usuarios = [];
+
+mostrarMenu();
+
+function mostrarMenu()
+{
+    let opcion = 0;
+
+    while (opcion !==5) {
+        opcion = Number(prompt(`ingrese una op
+                                1. agregar usuario
+                                2. borrar usuario
+                                5. SALIR`));
+        switch (opcion){
+            case 1: {
+                agregarUsuario()
+            }
+        }
+    }
+
+}
+
+function agregarUsuario() {
+    let id = prompt("ingrese id");
+    let nombre = prompt("ingrese nombre");
+    let apellido = prompt("ingrese apellido");
+} 
+
+ */
