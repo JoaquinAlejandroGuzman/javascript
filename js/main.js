@@ -340,6 +340,7 @@ function agregarUsuario()  //se esta declarando la funcion agregarUsuario()
 
 console.log(usuarios);
 
+asdasdasdadadasdasda    
  */
 /* class Usuario{
     constructor (id, nombre, apellido){
