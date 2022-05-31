@@ -1,0 +1,41 @@
+
+body {
+    background-color: #cccccc;
+    display: grid;
+    min-height: 100vh;
+    grid-template-rows: auto 1fr auto; }
+  
+.navbar {
+    background-image: linear-gradient(#838383, #cccccc); }
+    .navbar .navbar-collapse {
+      /*ESTO ES PARA LA BARRA DE NAVEGACION A LA IZQ*/
+      flex-grow: initial; }
+      .navbar .navbar-collapse .nav-link {
+        color: #c33263;
+        font-size: 1.3rem;
+        font-weight: 600; }
+  
+  .footer__color {
+    background-image: linear-gradient(#363636, #000000); }
+
+    .footer__color .copy-link:hover {
+      color: cornflowerblue !important; }
+  
+  .btn-mia {
+    /*FORMULARIO CONTACTO SECC*/
+    background: #c33263; }
+
+    .mia-link:hover {
+      color: #c33263 !important; }
+    
+    #galeria img{
+      width: 100%;
+    }
+  
+  #galeria img:hover {
+    border: 0.5rem solid #aaaaaa; }
+  
+  .btn:hover {
+    background: #aaaaaa; }
+  
+
