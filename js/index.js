@@ -152,3 +152,6 @@ function modificarProducto()
    }
 
 }
+
+//eventos
+
